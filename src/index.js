@@ -2,6 +2,7 @@ import { Client, IntentsBitField } from "discord.js";
 import dotenv from "dotenv";
 dotenv.config();
 
+
 /**
  * @description This array represents the categories of Events we want available to our Bot.
  * @argument: `IntentsBitField.Flags.Guilds`
@@ -33,6 +34,14 @@ const client = new Client({
  * ^^^^^^^^^^ EVENT LISTENERS ^^^^^^^^^^
  *  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  */
+
+// TODO EVENT HAPPENS
+// MAKE TWILIO API CALL
+// // members.json
+// // --> grab phone numbers, emails
+// // --> twilio sends out notifications (info sent)
+// .then((data) => Discord "NOTIFICATIONS SENT")
+// .error((err) => Discord "I couldn't send it")
 
 /**
  * @see https://old.discordjs.dev/#/docs/discord.js/main/general/welcome
