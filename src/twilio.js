@@ -26,12 +26,13 @@ const client = twilio(accountSid, authToken);
 // TODO refactor: SMS call and EMAIL call separate functions (check if null value for `member.email`)
 // TODO refactor: iterate over members only ONCE and call both functions
 
-export const sendTwilioSMS = () => {
+export const sendTwilioSMS = (title, creator, date) => {
+  // TODO accept "date" parameter and format to be human readable time 12-hour clock
   members.forEach((member) => {
     if (member.phone) {
       client.messages
         .create({
-          body: 'This will be replaced with new Project Ticket that you may want to apply to work on!',
+          body: `A new project is ready on the Discord "projects" Channel board: ${title} from ${creator} @ ${date}. If you would like to work on this project please react by Tomorrow morning. ༼ つ ◕_◕ ༽つ`,
           from: TWILIO_PHONE_NUMBER,
           to: member.phone
         })
