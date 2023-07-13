@@ -6,7 +6,8 @@ const members = [
   { name: "Matthew Mekita", email: "mpmekita@gmail.com", phone: "+12016022084" },
   { name: "Jessica Torres", email: "jessicatorres.debug@gmail.com", phone: "+15046212549" },
   { name: "Jordan Mann", email: "jordan.mann.dev@gmail.com", phone: "+15713191640" },
-  // { name: "Andrew Vasquez", email: "andrewvasquez.dev@gmail.com", phone: "+17609754217" }
+  { name: "Andrew Vasquez", email: "andrewvasquez.dev@gmail.com", phone: "+17609754217" },
+  { name: "Jorge Carvajal", email: "", phone: "" }
 ];
 
 export default members;
