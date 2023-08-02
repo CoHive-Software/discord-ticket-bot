@@ -10,6 +10,7 @@ const members = [
   { name: "Neil Shapiro", email: "neilshapiro.dev@gmail.com", phone: "+15043399511" },
   { name: "Benjamin Dickinson", email: "bsadickinson@gmail.com", phone: "" },
   { name: "Sam Littell", email: "samlittellmds@gmail.com", phone: "+15124963213" },
+  // { name: "Kalypso Homan", email: "", phone: "+15042582433" },
   // { name: "Jordan Mann", email: "jordan.mann.dev@gmail.com", phone: "+15713191640" },
   // { name: "Marcus Ager", email: "marcus.ager.dev@gmail.com", phone: "+15045648891" }
 ];
