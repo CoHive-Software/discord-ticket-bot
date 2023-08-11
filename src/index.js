@@ -66,7 +66,7 @@ discord.on("messageCreate", (message) => {
   // message.react('🤓');
 });
 
-discord.login(process.env.TOKEN);
+discord.login(process.env[TOKEN]);
 
 // WORKS!
 // sendTwilioSMS();
