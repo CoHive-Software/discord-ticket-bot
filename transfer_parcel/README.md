@@ -1,7 +1,7 @@
 # Discord Bot/Integration Template
 
 ### Description:
-This repo is a Discord Bot Bootstrap with all the necessary setup configured. Just plug in your [variables](./example.env)
+This repo is a Discord Bot Bootstrap with all the necessary setup configured. Just plug in your [variables](../example.env)
 and start building event listeners/handlers in the [index.js](./src/index.js)
 the [setup](https://github.com/colinwilliams91/discord-bot#setup) below walks through the Discord-side integration steps.
 
