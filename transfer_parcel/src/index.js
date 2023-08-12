@@ -1,6 +1,7 @@
 import { discord } from "./discord.js";
 import { sendTest, sendTwilioSMS } from "./twilio.js";
-import members from './members/index.js';
+import members from "./members/index.js";
+import welcome from "./welcome.js";
 
 
 /**
@@ -22,8 +23,21 @@ import members from './members/index.js';
  * @description: for BOT API documentation
  */
 
-discord.on("ready", (bot) => {
+
+discord.on("ready", async (bot) => {
   console.log(`✅ ${bot.options.rest.authPrefix} ${bot.user.tag} is online! Listening to channels: ${bot.channels}`);
+
+  const channel = discord.channels.cache.get("1132439106899693588");
+  const messagesInChannel = await channel.messages.fetch();
+
+  if (messagesInChannel.size === 0) {
+    // channel.send("_", {
+    //   files: ["https://res.cloudinary.com/dbdyc4klu/image/upload/v1690063402/EMAIL_Circle_Logo_Yellow_Font_tp1emb.png"]
+    // });
+    // channel.send(logo);
+    channel.send("https://res.cloudinary.com/dbdyc4klu/image/upload/v1690063402/EMAIL_Circle_Logo_Yellow_Font_tp1emb.png");
+    channel.send(welcome);
+  }
 });
 
 /**
@@ -52,7 +66,7 @@ discord.on("messageCreate", (message) => {
   // message.react('🤓');
 });
 
-discord.login(process.env.TOKEN);
+discord.login(process.env[TOKEN]);
 
 // WORKS!
 // sendTwilioSMS();
